@@ -1,0 +1,19 @@
+<!--pages/bizhi_load/bizhi_load.wxml-->
+<view class="container">
+  <view class="title1" style="position: relative; left: -1rpx; top: -184rpx; width: 590rpx; height: 70rpx; display: block; box-sizing: border-box">阿里云提供图片计算与下载服务</view>
+  <view class="title2" style="position: relative; left: -18rpx; top: -188rpx; width: 530rpx; height: 70rpx; display: block; box-sizing: border-box">QQ：2236167155投稿照片</view>
+<view class='detail_img' style="position: absolute; width: 704rpx; height: 696rpx; display: block; box-sizing: border-box; left: 40rpx; top: 152rpx">
+         <view class='view_img' wx:for="{{imglist}}" wx:for-item="image">
+          <image class='view_img1' src='{{image}}' data-src="{{image}}" bindtap="previewImage" ></image>
+        </view>
+         <view style='clear:both;'></view>
+
+
+   <block wx:if="{{output}}">
+          <view class="tips">
+            <text>还没有内容</text>
+          </view>
+</block>
+
+  </view>
+</view>

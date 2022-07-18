@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarBackgroundColor": "#fff",   
+  "navigationBarTitleText": "进制ASCII转换器",  
+  "navigationBarTextStyle": "black"    
+}

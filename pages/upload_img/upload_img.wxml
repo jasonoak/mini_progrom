@@ -1,0 +1,45 @@
+<view>
+
+  <view>
+    <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/young_study.JPG"  class="beijing"  ></image>
+  </view>
+
+    <view class="title">青年大学习</view>
+    <!-- <view>{{userInfo1}}</view>
+    <view>{{userInfo2}}</view> -->
+    <view class="ans_txt">本期答案：</view>
+
+    <view class="border" style="width: 635rpx; height: 437rpx; display: block; box-sizing: border-box; left: 56rpx; top: 50rpx; position: relative">
+    <view class="ans_txt_small"  style="width: 297rpx; height: 87rpx; display: block; box-sizing: border-box; left: -18rpx; top: 18rpx; position: relative">课上习题：</view>
+
+      <view class="kehou_ans"  style="position: relative; left: 52rpx; top: 199rpx; width: 558rpx; height: 141rpx; display: block; box-sizing: border-box">
+      <block wx:for="{{young_study_2[curIndex].kehou}}" wx:key="{{index}}"> 
+          <view class="right_text" >{{item.ans}}</view>
+      </block>
+    </view>
+
+    <view class="ans_txt_small"  style="width: 297rpx; height: 87rpx; display: block; box-sizing: border-box; left: -18rpx; top: -29rpx; position: relative">课后习题：</view>
+
+    <view class="keshang_ans"  style="width: 535rpx; height: 118rpx; display: block; box-sizing: border-box; left: 52rpx; top: -210rpx; position: relative">
+        <block wx:for="{{young_study_1[curIndex].keshang}}" wx:key="{{index}}"> 
+            <text class="right_text" >{{item.ans}}</text>
+        </block>
+    </view>
+    </view>
+
+
+ 
+    <view class="des" style="width: 558rpx; height: 60rpx; display: block; box-sizing: border-box; left: 95rpx; top: 91rpx; position: relative">温馨提示：点击加号图片可以上传图片哦</view>
+    <view class="des" style="width: 558rpx; height: 60rpx; display: block; box-sizing: border-box; left: 97rpx; top: 364rpx; position: relative">上传完成就可以退出，数据库自动保存</view>
+<view class="img" style="position: relative; left: -2rpx; top: 77rpx">
+  <block wx:for="{{ fileList }}" wx:key="index">
+    <view class="img2">
+       <view bindtap="delete" data-id="{{index}}">x</view>
+       <image bindtap="previewImage" data-url="{{item.url}}" src="{{item.url}}"></image>
+    </view> 
+   </block>
+   <image wx:if="{{fileList.length<9}}" bindtap="uploadToCloud" style="width: 200rpx;height: 200rpx;" src="/static/add.png"></image>
+</view>
+
+
+</view>

@@ -1,0 +1,40 @@
+/* pages/xiaoyuan_buauty/xiaoyuan_buauty.wxss */
+.board
+{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0rpx 9rpx 12rpx 10rpx rgba(98, 98, 98, 0.1);
+  margin-top: 20px;
+  border-radius: 10px
+}
+.item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+.item.active{
+  color: #0e4ea1;
+}
+.navbar{
+  z-index: 10;
+  width: 100%;
+    flex: none;
+    display: flex;
+    background: #fff;
+    position: fixed;
+   
+  
+   
+  }
+  .item.active:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: 6rpx;
+    width: 187.5rpx;
+  
+    background: #0e4ea1;
+  }

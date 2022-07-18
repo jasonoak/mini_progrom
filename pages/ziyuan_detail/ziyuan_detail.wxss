@@ -1,0 +1,11 @@
+/* pages/ziyuan_detail/ziyuan_detail.wxss */
+.biaoti
+{
+  font-size: 200%;
+  font-weight: 900;
+  padding-left: 8px;
+}
+.image_1
+{
+  position: relative;
+}

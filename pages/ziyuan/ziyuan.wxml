@@ -1,0 +1,34 @@
+<!--pages/ziyuan/ziyuan.wxml-->
+<view class="container" >
+  <!-- <view class="xuanze" style="position: absolute; width: 750rpx; height: 98rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <view class="xuanze_txt" style=" display: block; box-sizing: border-box">aaa</view>
+    <view class="xuanze_txt" style="position: absolute; display: block; box-sizing: border-box; left: 375rpx; top: 0rpx">aaa</view>
+  </view>
+  -->
+  <view class="search_box"  style="position: relative; left: 0rpx; top: -180rpx">
+    <view class="search_box1" bindtap="goto_search" style="position: relative; width: 698rpx; height: 72rpx; display: block; box-sizing: border-box; left: 26rpx; top: 16rpx">
+      <image src="/static/搜索.png" style="position: relative; width: 54rpx; height: 54rpx; display: inline-block; box-sizing: border-box; left: 40rpx; top: 10rpx"></image>
+     <view style="position: relative; width: 266rpx; height: 54rpx; display: block; box-sizing: border-box; left: 94rpx; top: -52rpx; text-align: center; font-weight: 900; padding-top: 3px;color: rgb(124, 124, 124);">卷死他们！</view>
+    </view>
+  </view>
+  <view class='detail'  style="position: relative; width: 750rpx; height: 5876rpx; display: block; box-sizing: border-box; left: 0rpx; top: -138rpx">
+          <view class='view_for' wx:for="{{imglist}}" wx:for-item="image" >
+            <navigator class="navigator_border" url='/pages/ziyuan_detail/ziyuan_detail?name={{image.courage_name}}&detail_img={{image.detail_img}}&web={{image.web_link}}' >
+             <view class="border" bindtap="goto_detail" style="width: 666rpx; height: 239rpx; display: block; box-sizing: border-box">
+                  <view class="biaoti_txt" > {{image.courage_name}}</view>
+                  <view class="shijain_txt">发布时间：{{image.uptime}}</view>
+                  <image src="{{image.type}}" style="position: relative; width: 90rpx; height: 90rpx; display: inline-block; box-sizing: border-box; left: 538rpx; top: -68rpx"></image>
+             </view>
+            </navigator>
+           
+        
+          </view>
+          <view style='clear:both;'></view>
+
+
+    <block wx:if="{{output}}">
+            
+  </block>
+
+    </view>
+</view>

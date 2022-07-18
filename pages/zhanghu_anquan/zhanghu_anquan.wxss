@@ -1,0 +1,13 @@
+/* pages/zhanghu_anquan/zhanghu_anquan.wxss */
+.box1
+{
+  background-color: aquamarine;
+}
+.img_touxiang
+{
+  border-radius: 100rpx
+}
+.img_touxiang_small
+{
+  border-radius: 75rpx
+}

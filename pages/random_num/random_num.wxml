@@ -1,0 +1,29 @@
+<!--pages/random_num/random_num.wxml-->
+<view>
+
+<view>
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/random_pic%20.JPG"  class="beijing"  ></image>
+</view>
+
+  <view class="title">点名随机数</view>
+
+
+  <view class="border" style="width: 635rpx; height: 437rpx; display: block; box-sizing: border-box; left: 56rpx; top: 50rpx; position: relative">
+          <view id="numbers">
+        <view id="header">
+          <input value="{{num1}}" type="number" maxlength="4" bindblur="setNum1" /> ~
+          <input value="{{num2}}" type="number" maxlength="4" bindblur="setNum2" />
+        </view>
+        <view id="result" style="position: absolute; left: 318rpx; top: 297rpx">{{result}}</view>
+      </view>
+      <button  bindtap="start" type="default" hidden="{{hideBtn}}"  style="position: relative; left: 0rpx; top: 1037rpx; width: 360rpx; height: 81rpx; display: block; box-sizing: border-box;  box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2)">摇一摇</button>
+  </view>
+
+
+
+  <view class="des" style="width: 574rpx; height: 60rpx; display: block; box-sizing: border-box; left: 89rpx; top: 50rpx; position: relative">手机摇一摇或点按“摇一摇”按钮开始抽数</view>
+  <view class="des" style="width: 539rpx; height: 60rpx; display: block; box-sizing: border-box; left: 106rpx; top: 50rpx; position: relative">下方“摇一摇”按钮再次出现后抽数完成</view>
+  <view class="des" style="width: 395rpx; height: 60rpx; display: block; box-sizing: border-box; left: 178rpx; top: 625rpx; position: relative">Designed by jasonsun</view>
+
+
+</view>

@@ -1,0 +1,15 @@
+<!--pages/zhanghu_anquan/zhanghu_anquan.wxml-->
+<image class="img_touxiang" src="{{src1}}" style="position: relative; width: 200rpx; height: 200rpx; display: inline-block; box-sizing: border-box; left: 281rpx; top: 70rpx"></image>
+
+
+<image bindtap="pic1" class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F6~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: -125rpx; top: 387rpx"></image>
+
+<image bindtap="pic2" class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F5~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: -45rpx; top: 387rpx"></image>
+<image bindtap="pic3"class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F4~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: 43rpx; top: 387rpx"></image>
+
+<image bindtap="pic4" class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F3~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: 75rpx; top: 462rpx"></image>
+<image bindtap="pic5" class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F2~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: 156rpx; top: 462rpx"></image>
+<image bindtap="pic6" class="img_touxiang_small" src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%A4%B4%E5%83%8F1~1.jpg" style="position: relative; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box; left: 243rpx; top: 462rpx"></image>
+
+<button  style="position: relative; left: 6rpx; top: 693rpx" bindtap="save_img">保存修改</button>
+<button type="warn" style="position: relative; left: 6rpx; top: 758rpx" bindtap="close_login">退出登录</button>

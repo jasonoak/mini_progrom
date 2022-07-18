@@ -1,0 +1,41 @@
+<!--pages/login_in.wxml-->
+	<view class="search_login"  >
+    <view>
+         <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/login_back.jpg"  class="beijing"  ></image>
+         <!-- https://636c-cloud1-9gs0h0jzebb88265-1312793329.tcb.qcloud.la/pic/login_back.jpg?sign=b94741ba4e5c5297094010f71351805a&t=1657092511 -->
+    </view>
+    <view class="register_font"  style="position: relative; left: 170rpx; top: 29rpx">登录</view>
+		<!-- 还没登录的时候 -->
+    <!-- 图标显示      -->
+		<!-- <image src="/static/login_icon.png"  class="icon_login" ></image> -->
+		<!-- 使用搜索框(学号) -->
+ 
+		<view class="loginout_word"   style="position: relative; left: 89rpx; top: 54rpx">输入学号来登录</view>
+		<input placeholder="请输入学号" class="input_num" bindinput="addnum"	maxlength="9"  style="width: 587rpx; height: 79rpx; display: block; box-sizing: border-box; left: 87rpx; top: 75rpx"></input>
+
+	    <!-- 使用搜索框(密码1) -->	
+	    <view class="loginout_word2"   style="position: relative; left: 89rpx; top: 114rpx">输入密码来登录</view>	
+      
+      <input class="input_pas" password type="text"  placeholder-style="" placeholder="请输入密码" bindinput="addpas"   style="width: 587rpx; height: 79rpx; display: block; box-sizing: border-box; left: 87rpx; top: 137rpx"></input>
+
+		<!-- 按钮 -->
+		<button type= "primary" class="botton_loginin1" bindtap="addDate_login" style="width: 258rpx; height: 79rpx; display: block; box-sizing: border-box; left: 0rpx; top: 522rpx; position: relative">
+			<view>一键登录</view>
+		</button>
+		
+		<!-- 按钮 -->
+		<button type="default" class="botton_loginin2" bindtap="goto_register" style="width: 258rpx; height: 79rpx; display: block; box-sizing: border-box; left: -4rpx; top: 564rpx; position: relative">
+			<view>学号注册</view>
+		</button>
+    <image src="/static/comment.png" class="icon_small" style="position: relative; left: 173rpx; top: 647rpx; width: 87rpx; height: 79rpx; display: inline-block; box-sizing: border-box">
+    </image>
+
+    <image src="/static/social_github.png" class="icon_small" style="position: relative; left: 250rpx; top: 647rpx; width: 87rpx; height: 79rpx; display: inline-block; box-sizing: border-box">
+    </image>
+
+    <image src="/static/aliyun.png" class="icon_small" style="position: relative; left: 328rpx; top: 647rpx; width: 87rpx; height: 79rpx; display: inline-block; box-sizing: border-box">
+    </image>
+    <view class="text_small"  style="position: relative; left: 199rpx; top: 672rpx; width: 374rpx; height: 43rpx; display: block; box-sizing: border-box">Designed by Jasonoak</view>
+
+    </view>
+

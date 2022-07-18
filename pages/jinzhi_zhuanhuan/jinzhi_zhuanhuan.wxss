@@ -1,0 +1,96 @@
+/* pages/jinzhi_zhuanhuan/jinzhi_zhuanhuan.wxss */
+/* pages/demo03/demo03.wxss */
+.beijing
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.title
+{
+  position: relative;
+  font-family: 'wanzheng';
+  font-size: 5ch;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  color:rgb(50, 125, 223);
+  filter: drop-shadow(0 0 0.15rem rgb(8, 162, 233));
+  
+}
+.input_txt
+{
+  color:rgb(105, 157, 226);
+  font-family: 'wanzheng';
+  font-size: 120%;
+  font-weight: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 0 0.10rem rgb(161, 161, 161));
+  
+}
+.divmiddle_column {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /*主轴是垂直 从上到下*/
+  flex-wrap: nowrap; /*不换行*/
+  width: 100%;
+  text-align:left;
+}
+.divmiddle_row {
+  display: flex;
+  flex-direction: row; /*主轴是水平，从左到右*/
+  flex-wrap: nowrap; /*不换行*/
+  width: 100%;
+  text-align:left;
+}
+.forinput {
+  display: flex;
+  width: 95%;
+  border-radius: 14rpx;
+  border: 3rpx solid gray;
+  margin: 2%;
+  text-align: left;
+  filter: drop-shadow(0 0 0.10rem rgb(161, 161, 161));
+}
+.forinput1
+{
+  color: rgb(134, 134, 134);
+  font-size: 110%;
+  font-weight: 900;
+
+  filter: drop-shadow(0 0 0.10rem rgb(161, 161, 161));
+}
+.bottom_cla
+{
+    box-shadow: 0rpx 9rpx 12rpx 10rpx rgba(98, 98, 98, 0.1);
+}
+.des_text
+{
+  position: relative;
+  padding-left: 40rpx;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+  color: #bbb9b9;
+  letter-spacing: 2rpx;
+  line-height: 42rpx;
+}
+.show_txt
+{
+  font-size: 110%;
+  color: #505050;
+  position: relative;
+}
+.small_txt
+{
+  padding: 5px;
+  font-size: 60%;
+  color: #4186ee;
+  position: relative;
+  text-decoration:underline;
+ 
+}
+
+
+

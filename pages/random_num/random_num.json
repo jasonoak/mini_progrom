@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#fff",   
+  "navigationBarTitleText": "摇摇随机数",  
+  "navigationBarTextStyle": "black"    
+}

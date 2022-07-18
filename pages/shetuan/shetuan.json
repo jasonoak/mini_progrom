@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    
+  },
+  "navigationBarBackgroundColor": "#fff",   
+  "navigationBarTitleText": "社团招新",  
+  "navigationBarTextStyle": "black"    
+}

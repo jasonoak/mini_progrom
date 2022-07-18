@@ -1,0 +1,8 @@
+<!--pages/ziyuan_detail/ziyuan_detail.wxml-->
+<view>
+      <view class="biaoti"  style="position: relative; width: 750rpx; height: 176rpx; display: block; box-sizing: border-box; left: 0rpx; top: 36rpx">{{name}}</view>
+      <image class="image_1" src="{{detail_img}}" style="position: relative; left: 53rpx; top: 36rpx; width: 644rpx; height: 796rpx; display: inline-block; box-sizing: border-box"></image>
+      <text style="word-break: break-all; text-align: left; display: block; position: relative; width: 682rpx; height: 220rpx; box-sizing: border-box; left: 34rpx; top: 54rpx">下载链接：{{web}}</text>
+      <button type="primary" bindtap="copyHandler" style="position: relative; left: 0rpx; top: 54rpx">一键复制</button>
+      <view style="position: relative; text-align: center; width: 750rpx; height: 52rpx; display: block; box-sizing: border-box; left: 0rpx; top: 76rpx; color: rgb(73, 71, 73)">请复制链接到手机电脑浏览器中打开，自动下载！</view>
+</view>

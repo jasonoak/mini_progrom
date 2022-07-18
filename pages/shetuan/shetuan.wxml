@@ -1,0 +1,18 @@
+<!--pages/shetuan/shetuan.wxml-->
+<!--pages/classify/classify.wxml-->
+<view  style="width: 750rpx; height: 1212rpx; display: block; box-sizing: border-box">
+<van-tree-select style="width: 749rpx; height: 1125rpx; display: inline; box-sizing: content-box" 
+  items="{{ items }}"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+  height="100%"
+
+/>
+</view>
+<view style="width: 750rpx; height: 229rpx; display: block; box-sizing: border-box">
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/xiaohui.jpg" style="position: absolute; width: 518rpx; height: 139rpx; display: block; box-sizing: border-box; left: 27rpx; top: 1242rpx"></image>
+  <view class="des_text" style="width: 395rpx; height: 60rpx; display: block; box-sizing: border-box; left: 187rpx; top: 1350rpx; position: absolute">Designed by jasonsun
+ </view> 
+</view>

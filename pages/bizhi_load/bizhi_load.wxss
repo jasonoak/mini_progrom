@@ -1,0 +1,38 @@
+/* pages/bizhi_load/bizhi_load.wxss */
+.title1
+{
+  position: relative;
+  font-family: 'wanzheng';
+  font-size: 120%;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  color:rgb(121, 121, 121);
+  text-align: center;
+  
+}
+.title2
+{
+  position: relative;
+  font-family: 'wanzheng';
+  font-size: 100%;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  color:rgb(202, 202, 202);
+  text-align: center;
+  
+}
+.view_img1
+{
+  border-radius: 30rpx;
+  width: 180rpx;
+  height: 320rpx;
+ margin: 10rpx
+}
+.view_img
+{
+  position: relative;
+	justify-content: center;
+	align-items: center;
+  display:inline-block;
+  margin-left: 10px;
+}

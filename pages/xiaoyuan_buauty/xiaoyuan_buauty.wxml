@@ -1,0 +1,26 @@
+<!--pages/xiaoyuan_buauty/xiaoyuan_buauty.wxml-->
+<view class="navbar">
+  <text class="item {{currentTab==index?'active':''}}" wx:for="{{navbar}}" data-tab_index="{{index}}" wx:key="unique" bindtap="changeNavBar">{{item}}</text>
+</view>
+<!-- 占位 -->
+<view style="height: 80rpx;"></view>
+
+<view hidden="{{currentTab!==0}}">
+<view style="position: relative; width: 750rpx; height: 1268rpx; display: block; box-sizing: border-box; left: 0rpx; top: 47rpx">
+  <view class='view_for' wx:for="{{imglist}}" wx:for-item="image"  >
+   
+      <image class="board"style="position: relative; width: 662rpx; height: 354rpx; display: block; box-sizing: border-box; left: 50rpx; top: 60rpx" src="{{image}}" bindtap="previewImage" style="position: relative; left: 43rpx; top: -4rpx; width: 675rpx; height: 379.6875rpx; display: inline-block; box-sizing: border-box"></image>
+
+  </view>
+</view>
+</view>
+<view hidden="{{currentTab!==1}}">
+  <view style="position: relative; width: 750rpx; height: 1268rpx; display: block; box-sizing: border-box; left: 0rpx; top: 47rpx">
+  <view class='view_for' wx:for="{{imglist_donghu}}" wx:for-item="image1"  >
+   
+      <image class="board"style="position: relative; width: 662rpx; height: 354rpx; display: block; box-sizing: border-box; left: 50rpx; top: 60rpx" src="{{image1}}" bindtap="previewImage1" style="position: relative; left: 43rpx; top: -4rpx; width: 675rpx; height: 379.6875rpx; display: inline-block; box-sizing: border-box"></image>
+
+  </view>
+</view>
+</view>
+

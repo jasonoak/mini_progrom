@@ -1,0 +1,26 @@
+<!--pages/qinghua/qinghua.wxml-->
+<!--pages/random_num/random_num.wxml-->
+<view>
+
+<view>
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/qinhua_pic.jpg"  class="beijing"  ></image>
+</view>
+<!-- 
+  <view class="title">情话</view> -->
+  <van-transition show="{{ show }}" custom-class="block" duration = '1500' name = "fade-down">
+      <view class="border" style="width: 635rpx; height: 437rpx; display: block; box-sizing: border-box; left: 56rpx; top: 50rpx; position: relative">
+        <view class="qinghua_txt" style="position: relative; left: 34rpx; top: 54rpx; width: 572rpx; height: 184rpx; display: block; box-sizing: border-box">{{daily_Word}}</view>
+      </view>
+
+      
+</van-transition>
+  
+<van-transition show="{{ show }}" custom-class="block" duration = '1500' name = "fade">
+<button bindtap="copyHandler"   style="position: absolute; left: 191rpx; top: 1054rpx">复制给TA</button>
+</van-transition>
+
+ <view class="des_text" style="width: 395rpx; height: 60rpx; display: block; box-sizing: border-box; left: 178rpx; top: 1328rpx; position: absolute">Designed by jasonsun
+ </view> 
+
+</view>
+

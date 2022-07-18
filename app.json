@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/my_detail/my_datail",
+    "pages/upload_img/upload_img",
+    "pages/school_map/school_map",
+    "pages/shetuan/shetuan",
+    "pages/random_num/random_num",
+    "pages/danmu/danmu",
+    "pages/login_in/login_in",
+    "pages/login_register/login_register",
+    "pages/map_gaode/map_gaode",
+    "pages/jinzhi_zhuanhuan/jinzhi_zhuanhuan",
+    "pages/qinghua/qinghua",
+    "pages/wenzhang_shengcheng/wenzhang_shengcheng",
+    "pages/bizhi_load/bizhi_load",
+    "pages/shetuan_detail/shetuan_detail",
+    "pages/wangye/wangye",
+    "pages/ziyuan/ziyuan",
+    "pages/ziyuan_detail/ziyuan_detail",
+    "pages/ziyuan_search/ziyuan_search",
+    "pages/weather_detail/weather_detail",
+    "pages/xiaoyuan_buauty/xiaoyuan_buauty",
+    "pages/itemize/itemize",
+    "pages/zhanghu_anquan/zhanghu_anquan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#C0C0C0",
+    "selectedColor": "#000000",  
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/home-fill.png",
+        "selectedIconPath": "static/home-fill_s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/itemize/itemize",
+        "iconPath": "static/角标.png",
+        "selectedIconPath": "static/角标_s.png",
+        "text": "Cate"
+      },
+      {
+        "pagePath": "pages/my_detail/my_datail",
+        "iconPath": "static/user center.png",
+        "selectedIconPath": "static/user center.png",
+        "text": "My"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-circle": "@vant/weapp/circle/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation":{
+      "desc": "点击确认"
+    }
+  }
+}

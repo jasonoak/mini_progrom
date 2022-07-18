@@ -1,0 +1,57 @@
+<!--pages/weather_detail/weather_detail.wxml-->
+<view style="width: 750rpx; height: 1384rpx; display: block; box-sizing: border-box">
+  <view>
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/%E5%A4%A9%E6%B0%94%E8%AF%A6%E7%BB%86%E9%A1%B5%E5%BA%95%E5%9B%BE.jpg"  class="beijing"  ></image>
+</view>
+<van-transition show="{{ show }}" custom-class="block" name="fade-down"duration="1000">
+  <view class="border" style="position: relative; width: 750rpx; height: 798rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+
+      <view class="biaoti_txt"  style="position: relative; width: 750rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 52rpx">{{province}} {{city}}</view>
+
+    <image src="{{bigimg}}" style="position: relative; width: 140rpx; height: 140rpx; display: inline-block; box-sizing: border-box; left: 301rpx; top: 53rpx"></image>
+    <view class="tem_txt" style="width: 750rpx; height: 96rpx; display: block; box-sizing: border-box; left: 0rpx; top: 154rpx; position: relative">最高{{temperature}}­°C/最低{{temperature_night}}­°C</view>
+
+      <view class="tem_txt" style="position: relative; width: 750rpx; left: -4rpx; top: -38rpx; height: 96rpx; display: block; box-sizing: border-box">{{weather}}/{{weather_night}}</view>
+
+      <image src="/static/weather_icon/风向.png" style="position: relative; width: 72rpx; height: 64rpx; display: inline-block; box-sizing: border-box; left: 107rpx; top: 92rpx"></image>
+      <view style="text-align: center; position: relative; width: 158rpx; height: 82rpx; display: block; box-sizing: border-box; left: 64rpx; top: 132rpx">{{winddirection}}</view>
+
+      <image src="/static/weather_icon/风力.png" style="position: relative; width: 72rpx; height: 64rpx; display: inline-block; box-sizing: border-box; left: 339rpx; top: -62rpx"></image>
+      <view style="text-align: center; position: relative; width: 158rpx; height: 82rpx; display: block; box-sizing: border-box; left: 297rpx; top: -22rpx">{{windpower}}级</view>
+
+      <image src="/static/weather_icon/湿度.png" style="position: relative; width: 72rpx; height: 64rpx; display: inline-block; box-sizing: border-box; left: 559rpx; top: -216rpx"></image>
+      <view style="text-align: center; position: relative; width: 158rpx; height: 82rpx; display: block; box-sizing: border-box; left: 517rpx; top: -176rpx">{{humidity}}%</view>
+  </view>
+</van-transition>
+<van-transition show="{{ show }}" custom-class="block"duration="2050">
+ <view class="border2" style="position: relative; width: 300rpx; height: 276rpx; display: block; box-sizing: border-box; left: 46rpx; top: 26rpx">
+        <image src="{{bigimg}}" style="position: relative; width: 103rpx; height: 103rpx; display: inline-block; box-sizing: border-box; left: 96rpx; top: 15rpx"></image>
+        <view style="text-align: center; position: relative; width: 276rpx; height: 70rpx; display: block; box-sizing: border-box; left: 8rpx; top: 6rpx">{{weather}}/{{weather_night}}</view>
+          <view style="text-align: center; position: relative; width: 214rpx; height: 70rpx; display: block; box-sizing: border-box; left: 40rpx; top: 6rpx">{{temperature}}­/{{temperature_night}}­</view>
+          <view class="weekday" style="text-align: right; position: relative; width: 186rpx; height: 42rpx; display: block; box-sizing: border-box; left: 96rpx; top: -29rpx">Today</view>
+  </view>
+
+    <view class="border2" style="position: relative; width: 300rpx; height: 276rpx; display: block; box-sizing: border-box; left: 410rpx; top: -250rpx">
+        <image src="{{smallimg1}}" style="position: relative; width: 103rpx; height: 103rpx; display: inline-block; box-sizing: border-box; left: 96rpx; top: 15rpx"></image>
+        <view style="text-align: center; position: relative; width: 276rpx; height: 70rpx; display: block; box-sizing: border-box; left: 8rpx; top: 6rpx">{{weather1}}/{{weather1_night}}</view>
+          <view style="text-align: center; position: relative; width: 214rpx; height: 70rpx; display: block; box-sizing: border-box; left: 40rpx; top: 6rpx">{{temperature1}}/{{temperature1_night}}</view>
+          <view class="weekday" style="text-align: right;position: relative; width: 186rpx; height: 42rpx; display: block; box-sizing: border-box; left: 96rpx; top: -29rpx">{{xingqi_first}}</view>
+  </view>
+
+  <view class="border2" style="position: relative; width: 300rpx; height: 276rpx; display: block; box-sizing: border-box; left: 46rpx; top: -220rpx">
+        <image src="{{smallimg2}}" style="position: relative; width: 103rpx; height: 103rpx; display: inline-block; box-sizing: border-box; left: 96rpx; top: 15rpx"></image>
+        <view style="text-align: center; position: relative; width: 276rpx; height: 70rpx; display: block; box-sizing: border-box; left: 8rpx; top: 6rpx">{{weather2}}/{{weather2_night}}</view>
+          <view style="text-align: center; position: relative; width: 214rpx; height: 70rpx; display: block; box-sizing: border-box; left: 40rpx; top: 6rpx">{{temperature2}}/{{temperature2_night}}</view>
+          <view class="weekday" style="text-align: right;position: relative; width: 186rpx; height: 42rpx; display: block; box-sizing: border-box; left: 96rpx; top: -29rpx">{{xingqi_second}}</view>
+  </view>
+  <view class="border2" style="position: relative; width: 300rpx; height: 276rpx; display: block; box-sizing: border-box; left: 410rpx; top: -496rpx">
+        <image src="{{smallimg3}}" style="position: relative; width: 103rpx; height: 103rpx; display: inline-block; box-sizing: border-box; left: 96rpx; top: 15rpx"></image>
+        <view style="text-align: center; position: relative; width: 276rpx; height: 70rpx; display: block; box-sizing: border-box; left: 8rpx; top: 6rpx">{{weather3}}/{{weather3_night}}</view>
+          <view style="text-align: center; position: relative; width: 214rpx; height: 70rpx; display: block; box-sizing: border-box; left: 40rpx; top: 6rpx">{{temperature3}}/{{temperature3_night}}</view>
+          <view class="weekday" style="text-align: right;position: relative; width: 186rpx; height: 42rpx; display: block; box-sizing: border-box; left: 96rpx; top: -29rpx">{{xingqi_third}}</view>
+  </view>
+</van-transition>
+  
+
+
+</view>

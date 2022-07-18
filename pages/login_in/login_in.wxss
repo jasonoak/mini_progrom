@@ -1,0 +1,75 @@
+/* pages/login_in.wxss */
+.beijing
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.register_font
+{
+  font-family: 'FZKT';
+  color: rgb(82, 81, 81);
+  text-align: center;
+  font-size: 7ch;
+  position: relative; width: 422rpx; height: 177rpx; display: block; box-sizing: border-box; left: 165rpx; top: 108rpx;
+
+}
+.search_login
+{
+  width: 750rpx; height: 875rpx; display: block; box-sizing: border-box;
+  
+}
+.icon_login
+{
+ position: relative; left: 225rpx; top: 116rpx; width: 310rpx; height: 300rpx; display: inline-block; box-sizing: border-box;
+}
+.loginout_word
+{
+  position: relative; left: 89rpx; top: 154rpx; width: 422rpx; height: 43rpx; display: block; box-sizing: border-box;
+  color:rgb(102, 102, 102);
+}
+.input_num
+{
+  position: relative; width: 587rpx; height: 79rpx; display: block; box-sizing: border-box; left: 89rpx; top: 179rpx;
+  background-color: rgb(243, 243, 243);
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 8rpx 8rpx rgba(98, 98, 98, 0.1);
+
+}
+.loginout_word2
+{
+  position: relative; left: 89rpx; top: 229rpx; width: 422rpx; height: 43rpx; display: block; box-sizing: border-box;
+  color:rgb(102, 102, 102);
+}
+.input_pas
+{
+  position: relative; left: 87rpx; top: 262rpx; width: 587rpx; height: 79rpx; display: block; box-sizing: border-box;
+  background-color: rgb(243, 243, 243);
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 8rpx 8rpx rgba(98, 98, 98, 0.1);
+}
+.botton_loginin1
+{
+  position: relative; 
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 8rpx 8rpx rgba(98, 98, 98, 0.1);
+}
+.botton_loginin2
+{
+  position: relative;
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 4rpx 4rpx rgba(98, 98, 98, 0.1);
+}
+.icon_small
+{
+  position: relative;
+}
+.text_small
+{
+  position: relative;
+  font-family:'FZKT';
+  font-size: xx-small;
+  color: rgb(202, 202, 202);
+  text-align: center;
+}

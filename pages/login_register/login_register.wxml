@@ -1,0 +1,36 @@
+<!--pages/login_register/login_register.wxml-->
+<view class="search_login"   style="width: 750rpx; height: 877rpx; display: block; box-sizing: border-box">
+  <view>
+    <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/registed.jpg"  class="beijing"  ></image>
+  </view>
+		<!-- 还没登录的时候 -->
+    <!-- "注册"显示      -->
+    <view class="register_font" >注册</view>
+	
+		<!-- 使用搜索框(学号) -->
+		<view class="loginout_word"    style="position: relative; left: 85rpx; top: 77rpx">输入学号来注册账号</view>
+		<input placeholder="请输入学号" class="input_num" bindinput="addnum"	maxlength="9"   style="width: 585rpx; height: 79rpx; display: block; box-sizing: border-box; left: 81rpx; top: 99rpx; position: relative"></input>
+
+	    <!-- 使用搜索框(密码1) -->	
+	    <view class="loginout_word2"    style="position: relative; left: 83rpx; top: 133rpx">设置密码(建议数字+字母形式)</view>	
+      
+      <input class="input_pas" password type="text"  placeholder-style="" placeholder="请输入密码" bindinput="addpas" style="width: 587rpx; height: 79rpx; display: block; box-sizing: border-box; left: 77rpx; top: 158rpx"></input>
+
+	    <!-- 使用搜索框(密码2) -->	
+	    <view class="loginout_word2"   style="position: relative; left: 87rpx; top: 185rpx">再次输入密码来确认</view>	
+      
+      <input class="input_pas" password type="text"  placeholder-style="" placeholder="请输入密码" bindinput="addpas2"   style="width: 587rpx; height: 79rpx; display: block; box-sizing: border-box; left: 77rpx; top: 206rpx"></input>
+
+		<!-- 按钮 -->
+		<button type= "primary" class="botton_loginin1" bindtap="addDate_login_old" style="width: 258rpx; height: 79rpx; display: block; box-sizing: border-box; left: -170rpx; top: 301rpx; position: relative">
+			<view>一键注册</view>
+		</button>
+		
+		<!-- 按钮 -->
+		<button type="default" class="botton_loginin2"  bindtap="backto_login" style="width: 258rpx; height: 79rpx; display: block; box-sizing: border-box; left: 160rpx; top: 222rpx; position: relative">
+			<view>返回登录</view>
+		</button>
+    
+	</view>
+
+

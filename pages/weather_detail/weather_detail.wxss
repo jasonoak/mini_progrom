@@ -1,0 +1,49 @@
+/* pages/weather_detail/weather_detail.wxss */
+.beijing
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  
+}
+
+.biaoti_txt
+{
+  
+  font-size: 3ch;
+  font-weight: 1000;
+  text-align: center;
+  
+}
+.border
+{
+  background-color:rgba(226, 226, 226, 0.904) ;
+  border-radius: 0 0 15px 15px 
+
+}
+.border2
+{
+  background-color:rgba(255, 255, 255, 0.822) ;
+  box-shadow: 0rpx 9rpx 12rpx 10rpx rgba(98, 98, 98, 0.1);
+  border-radius:15px 
+}
+.shijian_txt
+{
+  text-align: center;
+
+}
+.tem_txt
+{
+  font-size: 3ch;
+  font-weight: 1000;
+  text-align: center;
+}
+.weekday
+{
+  font-size:80%;
+  font-weight: 1000;
+ 
+  color: rgb(145, 145, 145);
+  text-align: right;
+}

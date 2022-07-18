@@ -1,0 +1,351 @@
+/**index.wxss**/
+@import '../css/iconfont.wxss';
+.container_sun
+{
+ 
+
+width:100%;
+overflow-x:hidden;
+}
+.hello
+{
+  font-size: 4ch;
+  font-family: 'wanzheng';
+  position: relative;
+  color:rgb(66, 66, 66);
+}
+.swiper-container {
+  position: relative;
+}
+
+.swiper-block {
+  height: 480rpx;
+  width: 100%;
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: unset;
+}
+
+.slide-image {
+  height: 320rpx;
+  width: 520rpx;
+  border-radius: 19rpx;
+  box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2);
+  margin: 0rpx 30rpx;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.active {
+  transform: scale(1.14);
+  transition: all 0.2s ease-in 0s;
+  z-index: 20;
+  opacity: 1;
+}
+
+/* dot定位位置 */
+
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 未经过前dot */
+
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background-color: transparent;
+  border-radius: 8rpx;
+  border: 0.1rpx solid #bbbbbb;
+  transition: all 0.6s ease-in-out;
+}
+
+/* 经过后dot */
+
+.swiper-container .dots .dot.active {
+  width: 24rpx;
+  background: #969696;
+}
+.huishuo
+{
+  font-family: 'wanzheng';
+  color:rgb(99, 99, 99);
+  font-size: 2ch;
+  position: relative;
+}
+.daily_word_css
+{
+  font-family: 'wanzheng';
+  color:rgb(99, 99, 99);
+  font-size: 2ch;
+}
+.box1_txt_box
+{
+  border: 1px;
+  border-color: black;
+
+}
+.box1_txt
+{
+  border-style: solid;
+  padding: 10px;
+  margin: 1px;
+  border: 1px;
+  border-collapse:separate;
+  border-color: black;
+  overflow: visible;
+  font-size: 90%;
+}
+/* 天气数据的文本 */
+.tem_txt
+{
+  position: relative;
+  /* font-family: 'wanzheng';
+  font-size: 2.5ch;
+  padding-left: 10px;
+  padding-top: 13px; */
+}
+.border
+{
+  background-color: rgb(255, 255, 255);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 9rpx 12rpx 10rpx rgba(98, 98, 98, 0.1);
+  display:flex;
+  
+}
+.jingdu_border
+{
+ position: relative;
+ text-align: center;
+ padding-top: 20px;
+ font-weight: 1000;
+ color:rgb(99, 99, 99);
+}
+.jingdu_text
+{
+  text-align: center;
+  position: relative;
+  color:rgb(32, 189, 45);
+}
+.big_weather
+{
+  position: relative;
+ 
+  font-size: 90%;
+  font-weight: 1000;
+  color:rgb(99, 99, 99);
+}
+.big_weather_day
+{
+  position: relative;
+ 
+  font-size: 125%;
+  font-weight: 1000;
+  color:rgb(82, 82, 82);
+}
+.big_temp
+{
+  position: relative;
+  text-align: center;
+  font-size: 90%;
+  font-weight: 1000;
+  color:rgb(99, 99, 99);
+}
+.small_temp
+{
+  position: relative;
+  text-align: center;
+  font-size: 70%;
+  font-weight: 1000;
+  color:rgb(99, 99, 99);
+}
+.small_weather
+{
+  position: relative;
+  text-align: center;
+  font-size: 80%;
+  font-weight: 1000;
+  color:rgb(82, 82, 82);
+}
+.small_small_text
+{
+  position: relative;
+  text-align: center;
+  font-size: 0.1ch;
+  font-weight: 700;
+  color:rgb(158, 158, 158);
+
+}
+.border_small_1
+{
+  background-color: rgb(243, 111, 111);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(228, 119, 119, 0.432);
+  display:flex;
+}
+.border_small_2
+{
+  background-color: rgb(250, 149, 91);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(218, 141, 55, 0.336);
+  display:flex;
+}
+.border_small_3
+{
+  background-color: rgb(253, 201, 88);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(223, 174, 13, 0.274);
+  display:flex;
+}
+.border_small_4
+{
+  background-color: rgb(88, 118, 202);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(138, 164, 238, 0.61);
+  display:flex;
+}
+
+.border_small_5
+{
+  background-color: rgb(114, 159, 218);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(42, 121, 185, 0.274);
+  display:flex;
+}
+.border_small_6
+{
+  background-color: rgb(124, 194, 221);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(77, 165, 206, 0.37);
+  display:flex;
+}
+.border_small_7
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf5lgU.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(140, 228, 132);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+  
+  
+}
+.border_small_8
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf61j1.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(235, 218, 125);
+  border-radius: 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+}
+.border_small_1_txt
+{
+  position: relative;
+  font-weight: 900;
+  text-align: center;
+  font-size: 80%;
+  color:rgb(255, 255, 255);
+}
+.border_small_1_txt_big
+{
+  position: relative;
+  font-weight: 900;
+  
+  font-size: 130%;
+  color:rgb(255, 255, 255)
+  
+}
+.border_small_1_txt_big2
+{
+  position: relative;
+  font-weight: 900;
+  
+  font-size: 170%;
+  color:rgb(255, 255, 255);
+
+}
+.blur_demo
+{
+ 
+  background: rgba(250, 250, 250, 0.336);
+  border-radius: 35rpx;
+  backdrop-filter: blur(10x);
+}
+.blur_demo1
+{
+  background: rgba(250, 250, 250, 0.527);
+
+  backdrop-filter: blur(10x);
+}
+.border_small_9_1
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf7Paj.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(235, 218, 125);
+  border-radius: 35rpx 0 0 0;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+}
+.border_small_9_2
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf7iIs.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(235, 218, 125);
+  border-radius: 0 35rpx 0 0;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+}
+.border_small_9_3
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf7kin.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(235, 218, 125);
+  border-radius: 0 0 0 35rpx;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+}
+.border_small_9_4
+{
+  background-image:  url('https://s1.ax1x.com/2022/07/14/jf7AGq.jpg');
+  background-size: 100% 100%;
+  background-color: rgb(235, 218, 125);
+  border-radius: 0 0 35rpx 0;
+  box-shadow: 0rpx 19rpx 30rpx 8rpx rgba(110, 110, 110, 0.37);
+  display:flex;
+}
+.school_small1
+{
+  background-image: linear-gradient(to left, rgba(199, 197, 197, 0.466), rgb(110, 149, 231));
+  border-radius: 13rpx 0   0 13rpx;
+  font-size: 120%;
+  font-weight: 800;
+  color: aliceblue;
+  padding: 0 5px;
+}
+.school_small2
+{
+  background-image: linear-gradient(to right, rgba(199, 197, 197, 0.466), rgb(110, 149, 231));
+  border-radius: 0 13rpx 13rpx 0;
+  font-size: 120%;
+  font-weight: 800;
+  color: aliceblue;
+  padding: 0 5px;
+}
+.school_small_eng
+{
+  font-size: 80%;
+  font-weight: 800;
+  color: aliceblue;
+}

@@ -1,0 +1,196 @@
+<!--index.wxml-->
+<view style="position: absolute; width: 750rpx; height: 472rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+      <view>
+      <!-- 3d轮播图区域 -->
+        <view class='swiper-container'>
+        <swiper class='swiper-block' autoplay='true' circular='true' previous-margin='90rpx' next-margin='90rpx' current='0' bindchange='swiperChange' interval='5000' duration='1000'>
+          <block wx:key='unique' wx:for='{{swiperImgUrls}}'>
+            <swiper-item class='swiper-item'>
+              <image bindchange='imageChange' id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+            </swiper-item>
+          </block>
+        </swiper>
+        <!-- 自定义指示点dot -->
+        <view class="dots">
+          <block wx:for="{{swiperImgUrls}}" wx:key="unique">
+            <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+          </block>
+        </view>
+      </view>
+      </view>
+
+      <van-notice-bar left-icon="volume-o" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准"mode="closeable"></van-notice-bar>
+
+<!-- 第一个框 -->
+    <van-transition show="{{ show }}" custom-class="block" duration = '600' name = "fade-left" style=" width: 750rpx; height: 376rpx; display: block; box-sizing: border-box; left: -2rpx; top: 554rpx">
+    <view class="border" bindtap="goto_jindu_detail" style="position: relative; width: 640rpx; height: 326rpx; display: block; box-sizing: border-box; left: 64rpx; top: 30rpx">
+      <view style="position: relative; width: 384rpx; height: 50rpx; display: block; box-sizing: border-box; left: 39rpx; top: 22rpx; font-weight: 1000; color:rgb(122, 122, 122);">{{dataTime}}</view>
+    <view class="box1_txt_box" style="position: relative; width: 430rpx; height: 253rpx; display: flex; box-sizing: border-box; left: 16rpx; top: 22rpx; text-align: center; justify-content: center; align-items: center; font-weight: 700; color:rgb(122, 122, 122);">
+      
+        <view class="box1_txt">放假开始时间 2022   7 01</view>
+        <view class="box1_txt">老生回校时间 2022   8 28</view>
+        <view class="box1_txt">新生回校时间 2022 9 04</view>
+    </view>
+          <view  class="jingdu_border" style="width: 180rpx; height: 253rpx; display: block; box-sizing: border-box; position: relative; left: 446rpx; top: -256rpx">
+          <view class="jingdu_text" style="position: relative; left: -22rpx; top: 139rpx"></view>
+          <van-circle value="{{ xianshi_tim_bili }}" stroke-width="6" layer-color="#eeeeee" color="{{ gradientColor }}" size="85" text="假期进度" />
+        </view>
+
+    </view>
+    </van-transition>
+
+<!-- 第二个框天气 -->
+    <van-transition show="{{ show }}" custom-class="block" duration = '600' name = "fade-left" style="position: absolute; left: 10rpx; top: 1196rpx; width: 654rpx; height: 326rpx; display: block; box-sizing: border-box">
+      <view class="border" bindtap="goto_weather_detail" style="position: absolute; width: 640rpx; height: 326rpx; display: block; box-sizing: border-box; left: 50rpx; top: -16rpx">
+
+        <view  class="jingdu_border" style="width: 180rpx; height: 253rpx; display: block; box-sizing: border-box; position: relative; left: 26rpx; top: 50rpx">
+            <van-circle value="{{humidity}}" stroke-width="6" layer-color="#eeeeee" color="{{ gradientColor2 }}" size="85" text="湿度{{humidity}}%" />
+        </view>
+
+        <image src="{{src_big}}" style="position: relative; width: 100rpx; height: 100rpx; display: inline-block; box-sizing: border-box; left: 508rpx; top: -225rpx"></image>
+
+        <image src="{{src_small1}}" style="position: relative; width: 60rpx; height: 60rpx; display: inline-block; box-sizing: border-box; left: 138rpx; top: -116rpx"></image>
+        <image src="{{src_small2}}" style="position: relative; width: 60rpx; height: 60rpx; display: inline-block; box-sizing: border-box; left: 237rpx; top: -116rpx"></image>
+        <image src="{{src_small3}}" style="position: relative; width: 60rpx; height: 60rpx; display: inline-block; box-sizing: border-box; left: 326rpx; top: -116rpx"></image>
+        
+        <view class="big_weather_day" style="position: relative; width: 220rpx; height: 60rpx; display: block; box-sizing: border-box; left: 239rpx; top: -324rpx">白天{{weather}}</view>
+        <view class="big_temp" style="position: relative; width: 100rpx; height: 50rpx; display: block; box-sizing: border-box; left: 409rpx; top: -324rpx">{{temperature}}/{{temperature_night}}</view>
+        <view class="big_weather" style="position: relative; width: 220rpx; height: 50rpx; display: block; box-sizing: border-box; left: 239rpx; top: -374rpx">夜间{{weather_night}}</view>
+
+
+        <view class="small_temp" style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 201rpx; top: -278rpx">{{temperature1}}/{{temperature1_night}}</view>
+        <view class="small_weather" style="position: relative; width: 158rpx; height: 50rpx; display: block; box-sizing: border-box; left: 186rpx; top: -292rpx">{{weather1}}</view>
+
+
+        <view class="small_temp"style="position: relative; width: 134rpx; height: 60rpx; display: block; box-sizing: border-box; left: 338rpx; top: -412rpx" style="position: relative; left: 362rpx; top: -378rpx; width: 134rpx; height: 40rpx; display: block; box-sizing: border-box">{{temperature2}}/{{temperature2_night}}</view>
+        <view class="small_weather"style="position: relative; width: 134rpx; height: 60rpx; display: block; box-sizing: border-box; left: 362rpx; top: -412rpx" style="position: relative; left: 348rpx; top: -378rpx; width: 158rpx; height: 60rpx; display: block; box-sizing: border-box">{{weather2}}</view>
+
+
+        <view class="small_temp"style="position: relative; width: 134rpx; height: 60rpx; display: block; box-sizing: border-box; left: 496rpx; top: -528rpx" style="width: 100rpx; height: 50rpx; display: block; box-sizing: border-box; left: 526rpx; top: -478rpx; position: relative">{{temperature3}}/{{temperature3_night}}</view>
+        <view class="small_weather"style="position: relative; width: 134rpx; height: 60rpx; display: block; box-sizing: border-box; left: 496rpx; top: -528rpx" style="position: relative; left: 509rpx; top: -488rpx; width: 134rpx; height: 60rpx; display: block; box-sizing: border-box">{{weather3}}</view>
+
+        
+      
+        <view class="small_small_text " style="width: 606rpx; height: 50rpx; display: block; box-sizing: border-box; left: 20rpx; top: -483rpx; position: relative">{{reporttime}} 高德API提供天气服务</view>
+        
+      
+
+      </view>
+  </van-transition>
+  <!-- //====================================================== -->
+  <van-transition show="{{ show }}" custom-class="block" duration = '600' name = "fade-right" style="position: absolute; left: 10rpx; top: 947rpx; width: 728rpx; height: 222rpx; display: block; box-sizing: border-box">
+  <view style="position: absolute; width: 728rpx; height: 230rpx; display: block; box-sizing: border-box; left: 2rpx; top: -16rpx">
+        <!-- 三个小框 按钮1 -->
+      <view class="border_small_1" bindtap="goto_unloadimg" style="position: absolute; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 54rpx; top: 26rpx">
+          <image src="/static/党建_考核任务.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+          <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">青年</view>
+          <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">大学习</view>
+
+        </view>
+
+          <!-- 三个小框 按钮2 -->
+      <view class="border_small_2" bindtap="goto_ziyaun" style="position: absolute; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 296rpx; top: 26rpx">
+        <image src="/static/题库.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+        <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -2rpx">题库</view>
+        <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -2rpx">分享站</view>
+        </view>
+      <!-- 三个小框 按钮3 -->
+      <view class="border_small_3" bindtap="goto_danmu" style="position: absolute; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 524rpx; top: 26rpx">
+        <image src="/static/弹幕.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+        <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">手持</view>
+        <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">弹幕</view>
+
+        </view>
+  </view>
+  </van-transition>
+   <!-- //================================================== -->
+<view style="position: absolute; left: 25rpx; top: 1572rpx; width: 704rpx; height: 244rpx; display: block; box-sizing: border-box">
+        <!-- 三个小框 按钮4 -->
+        <view class="border_small_4" bindtap="goto_jinzhi" style="position: relative; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 42rpx; top: 34rpx">
+      <image src="/static/字段二进制.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">进制ASCII</view>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">转换器</view>
+  </view>
+
+
+        <!-- 三个小框 按钮5 -->
+        <view class="border_small_5" bindtap="goto_qinghau" style="position: relative; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 276rpx; top: -136rpx">
+      <image src="/static/爱情.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">甜言</view>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">密语</view>
+  </view>
+
+        <!-- 三个小框 按钮6 -->
+        <view class="border_small_6" bindtap="goto_wenzhang" style="position: relative; width: 170rpx; height: 170rpx; display: block; box-sizing: border-box; left: 502rpx; top: -306rpx">
+      <image src="/static/编辑文章.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: 6rpx"></image>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">文章</view>
+      <view class="border_small_1_txt" style="position: relative; left: -2rpx; top: -6rpx">生成器</view>
+  </view>
+</view>
+
+    <!-- //==============win11板块大按钮=========== -->
+    <view style="position: absolute; width: 704rpx; height: 480rpx; display: block; box-sizing: border-box; left: 22rpx; top: 1816rpx">
+          <view class="border_small_7" bindtap="goto_shetuan" style="position: relative; width: 402rpx; height: 402rpx; display: block; box-sizing: border-box; left: 34rpx; top: 18rpx">
+            <view class='blur_demo' style="position: relative; width: 409rpx; height: 398rpx; display: block; box-sizing: border-box; left: -4rpx; top: 2rpx"></view>
+                  <image src="/static/组织.png" style="position: relative; width: 168rpx; height: 166rpx; display: inline-block; box-sizing: border-box; left: 33rpx; top: -367rpx"></image>
+                
+                  <view class="border_small_1_txt_big" style="position: relative; left: 33rpx; top: -345rpx; width: 287rpx; height: 75rpx; display: block; box-sizing: border-box">社团与组织</view>
+                  <view class="border_small_1_txt_big2" style="position: relative; left: 33rpx; top: -345rpx; width: 168rpx; height: 75rpx; display: block; box-sizing: border-box">招新</view>
+            </view>
+ 
+            <view class="border_small_8" bindtap="goto_bizhi_load" style="position: relative; width: 170rpx; height: 400rpx; display: block; box-sizing: border-box; left: 502rpx; top: -384rpx">
+              <view class='blur_demo' style="position: relative; width: 170rpx; height: 404rpx; display: block; box-sizing: border-box; left: -1rpx; top: -2rpx"></view>
+          <image src="/static/图片、壁纸.png" style="position: relative; width: 75rpx; height: 75rpx; display: inline-block; box-sizing: border-box; left: 46rpx; top: -379rpx"></image>
+          <view class="border_small_1_txt" style="position: relative; left: -3rpx; top: -360rpx">壁纸</view>
+          <view class="border_small_1_txt" style="position: relative; left: 14rpx; top: -360rpx; width: 141rpx; height: 33rpx; display: block; box-sizing: border-box">分享站</view>
+      </view>
+  </view>
+  <!-- //======================校园图按钮================================================= -->
+  <view style="position: absolute; width: 704rpx; height: 552rpx; display: block; box-sizing: border-box; left: 25rpx; top: 2294rpx">
+
+      <view class="border_small_9_1" bindtap="goto_xinsheng_navigation" style="position: relative; width: 312rpx; height: 180rpx; display: block; box-sizing: border-box; left: 24rpx; top: 58rpx">
+            <view class='blur_demo1' style="  border-radius: 35rpx 0 0 0;width: 312rpx; height: 182rpx; display: block; box-sizing: border-box">
+              <view class="school_small1" style="position: absolute; width: 286rpx; height: 96rpx; display: block; box-sizing: border-box; left: 24rpx; top: 70rpx">新生引航</view>
+              <view class="school_small_eng" style="position: absolute; width: 286rpx; height: 46rpx; display: block; box-sizing: border-box; left: 24rpx; top: 118rpx">Freshman navigation</view>
+            
+            </view>
+        
+      </view>
+
+      <view class="border_small_9_2" bindtap="goto_xiaoyaun_navigation" style="  position: relative; width: 312rpx; height: 180rpx; display: block; box-sizing: border-box; left: 376rpx; top: -122rpx">
+            <view class='blur_demo1' style=" border-radius: 0 35rpx 0 0;width: 312rpx; height: 182rpx; display: block; box-sizing: border-box">
+              <view class="school_small2" style="position: absolute; width: 286rpx; height: 96rpx; display: block; box-sizing: border-box; left: -2rpx; top: 66rpx">校园导航</view>
+              <view class="school_small_eng" style="position: absolute; width: 286rpx; height: 46rpx; display: block; box-sizing: border-box; left: -2rpx; top: 116rpx">Campus navigation</view>
+              </view>
+      </view>
+
+      <view class="border_small_9_3" bindtap="goto_ligong_yingxiang" style="  position: relative; width: 312rpx; height: 180rpx; display: block; box-sizing: border-box; left: 24rpx; top: -80rpx">
+            <view class='blur_demo1' style="border-radius: 0 0 0 35rpx;width: 312rpx; height: 182rpx; display: block; box-sizing: border-box"> 
+              <view class="school_small1" style="position: absolute; width: 286rpx; height: 96rpx; display: block; box-sizing: border-box; left: 26rpx; top: 26rpx">理工印象</view>
+              <view class="school_small_eng" style="position: absolute; width: 286rpx; height: 46rpx; display: block; box-sizing: border-box; left: 26rpx; top: 76rpx">Ligong Impression</view>
+
+              </view>
+      </view>
+
+      <view class="border_small_9_4" bindtap="goto_xiaoyaun_detail" style="position: relative; width: 312rpx; height: 180rpx; display: block; box-sizing: border-box; left: 376rpx; top: -258rpx">
+            <view class='blur_demo1' style=" border-radius: 0 0 35rpx 0;width: 312rpx; height: 182rpx; display: block; box-sizing: border-box">
+              <view class="school_small2" style="position: absolute; width: 286rpx; height: 96rpx; display: block; box-sizing: border-box; left: 2rpx; top: 24rpx">校园风光</view>
+              <view class="school_small_eng" style="position: absolute; width: 286rpx; height: 46rpx; display: block; box-sizing: border-box; left: 2rpx; top: 74rpx">Campus scenry</view>
+          
+            </view>
+      </view>
+
+
+
+  </view>
+
+
+
+
+      <!-- <view>{{userInfo2}}</view> -->
+      <!-- <view class="huishuo" style="position: relative; left: 22rpx; top: 1976rpx; width: 704rpx; height: 54rpx; display: block; box-sizing: border-box">小慧：</view>
+      <view class="daily_word_css" style="position: absolute; width: 537rpx; height: 54rpx; display: block; box-sizing: border-box; left: 22rpx; top: 3256rpx">{{daily_Word}}</view> -->
+
+      <!-- <button bindtap="getDate" style="position: relative; left: 0rpx; top: 1064rpx">添加数据</button>
+      <button bindtap="selectDate" style="position: relative; left: 0rpx; top: 1097rpx">筛选数据</button> -->
+</view>

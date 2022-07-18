@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#fff",   
+  "navigationBarTitleText": "文章生成",  
+  "navigationBarTextStyle": "black"    
+}

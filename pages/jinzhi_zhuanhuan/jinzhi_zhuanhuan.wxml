@@ -1,0 +1,49 @@
+<!--pages/jinzhi_zhuanhuan/jinzhi_zhuanhuan.wxml-->
+<!--pages/demo03/demo03.wxml-->
+<view>
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/pic-back/jinzhi_pic.jpg"  class="beijing"  ></image>
+
+</view>
+  <view class="title" style="position: relative; left: 0rpx; top: 32rpx">进制ASCII转换</view>
+<view style="position: relative; left: 0rpx; top: -29rpx; width: 750rpx; height: 1290rpx; display: block; box-sizing: border-box">
+
+  <view class="input_txt" style="position: relative; left: 16rpx; top: 181rpx; width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">十进制数</view>
+    <input style="position: relative; width: 446rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 174rpx; top: 87rpx"  class='forinput' bindinput="KeyInput" id='10' type="number" confirm-type="done" value='{{decimal}}' placeholder="这里输入10进制数" />
+
+    <view class="input_txt" style="position: relative; left: 16rpx; top: 181rpx; width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">二进制数</view>
+    <input style="position: relative; width: 446rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 174rpx; top: 87rpx"  class='forinput' bindinput="KeyInput" type="number" id='2' confirm-type="done" value='{{twoadecimal}}' placeholder="这里输入2进制数" />
+
+    <view class="input_txt" style="position: relative; left: 16rpx; top: 181rpx; width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">八进制数</view>
+    <input class='forinput' style="position: relative; width: 446rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 174rpx; top: 87rpx"bindinput="KeyInput" type="number" id='8' confirm-type="done" value='{{eightadecimal}}' placeholder="这里输入8进制数" />
+
+   <view class="input_txt" style="position: relative; left: 16rpx; top: 181rpx; width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">十六进制</view>
+    <input style="position: relative; width: 446rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 174rpx; top: 85rpx"  class='forinput' bindinput="KeyInput" type="text" id='16' confirm-type="done" value='{{hexadecimal}}' placeholder="这里输入16进制数" />
+
+
+    <view class="input_txt" style="position: relative; left: 16rpx; top: 183rpx; width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">ASCII</view>
+    <input class='forinput' style="position: relative; width: 446rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 174rpx; top: 87rpx" bindinput="KeyInput" type="text" id='ASCII' confirm-type="done" value='{{ASCIInum}}' placeholder="ASCII字符" />
+    <view class='forinput1' style="position: relative; border: 0rpx; left: 189rpx; top: 96rpx; width: 300rpx; height: 44rpx; display: flex; box-sizing: border-box">{{ASCIInum_show}}</view>
+
+ <view class="small_txt" style="width: 192rpx; height: 60rpx; display: block; box-sizing: border-box; left: 488rpx; top: 52rpx; position: relative" bindtap="toShow">什么是ASCII?</view>
+    <button class="bottom_cla" bindtap='emptied' size='default'  style="position: relative; left: -2rpx; top: 106rpx">清空</button>
+
+    <van-popup
+      show="{{ show }}"
+      round
+      closeable
+      position="bottom"
+      custom-style="height: 45%"
+      bind:close="onClose"
+    >
+<view class="show_txt" style="width: 656rpx; height: 192rpx; display: block; box-sizing: border-box; left: 44rpx; top: 104rpx; position: relative">  emmm。。。这么说吧，ASCII就可以理解成一种计算机能读懂的字符代码编号，如果你想让计算机知道"A"，你只要去查到对应的ASCII码（65）就好啦！</view>
+<view class="show_txt" style="position: relative; left: 44rpx; top: 142rpx; width: 656rpx; height: 144rpx; display: block; box-sizing: border-box">  这样理解了吧。。用小慧来算一个字符编号，你只要吧字符输入ASCII对应的输入框里，最后计算输出的十进制数字，就是你要的编码哦！</view>
+<view class="show_txt" style="position: relative; left: 44rpx; top: 231rpx; width: 656rpx; height: 144rpx; display: block; box-sizing: border-box">  哦哦哦，还有注意一点，ASCII码是只有0~127的，所以，当你在十进制那里输入了超过127的数字，自然也就没有答案啦。</view>
+<view class="des_text" style="position: relative; left: 185rpx; top: 298rpx; width: 374rpx; height: 62rpx; display: block; box-sizing: border-box">  Writed by jasonoak</view>
+<image src="/static/IMG_8762~3.jpg" style="position: relative; width: 130rpx; height: 118rpx; display: inline-block; box-sizing: border-box; left: 552rpx; top: 208rpx"></image>
+</van-popup>
+
+    <view class="des_text" style="width: 395rpx; height: 60rpx; display: block; box-sizing: border-box; left: 176rpx; top: 130rpx; position: relative">Designed by jasonsun</view>
+
+
+
+  </view>

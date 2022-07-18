@@ -1,0 +1,53 @@
+/* pages/my_detail/my_datail.wxss */
+.beijing
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  
+}
+.blur_demo1
+{
+  position: absolute;
+  background: rgba(250, 250, 250, 0.644);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10x);
+  z-index: -1;
+}
+.img_touxiang
+{
+  border-radius: 100rpx
+}
+.info
+{
+  font-family: 'FZKT';
+  position: relative;
+  width: 579rpx; height: 224rpx; display: block; box-sizing: border-box; left: 91rpx; top: 47rpx; 
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 8rpx 8rpx rgba(98, 98, 98, 0.1);
+}
+.goto_login
+{
+  position: relative;
+  border-radius: 17rpx;
+  box-shadow: 0rpx 3rpx 8rpx 8rpx rgba(98, 98, 98, 0.1);
+   left: 5rpx; top: 85rpx;
+}
+.username
+{
+  font-weight: bold;
+  font-size: x-large;
+}
+.border
+{
+  background-color: rgba(255, 255, 255, 0.308);
+  border-radius: 25px;
+  box-shadow: 0rpx 9rpx 12rpx 10rpx rgba(152, 178, 226, 0.1);
+}
+.small_txt
+{
+  font-weight: bold;
+  font-size:large;
+}

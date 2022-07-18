@@ -1,0 +1,31 @@
+<!--pages/ziyuan_search/ziyuan_search.wxml-->
+<view>
+    <van-search
+      value="{{ search }}"
+      placeholder="请输入搜索关键词"
+      show-action
+      bind:change="onChange" 
+      bind:search="onSearch"
+      bind:cancel="onCancel"
+      focus="ture"
+    ></van-search>
+ <view wx-if="{{isResultShow}}" class="no_txt" >
+  <view  style="position: relative; width: 716rpx; height: 62rpx; display: block; box-sizing: border-box; left: 0rpx; top: 352rpx">嘿呀哈，还没有数据哦！</view>
+  <image src="https://jasonoak-miniprogrom-backpic.oss-cn-hangzhou.aliyuncs.com/insert-pic/%E5%B0%8F%E8%93%9D.jpg" style="position: relative; width: 422rpx; height: 372rpx; display: inline-block; box-sizing: border-box; left: -44rpx; top: -88rpx"></image>
+ </view>
+  
+  <view class='detail'  >
+          <view class='view_for' wx:for="{{imglist}}" wx:for-item="image" >
+            <navigator class="navigator_border" url='/pages/ziyuan_detail/ziyuan_detail?name={{image.courage_name}}&detail_img={{image.detail_img}}&web={{image.web_link}}' >
+             <view class="border" bindtap="goto_detail" style="width: 666rpx; height: 239rpx; display: block; box-sizing: border-box">
+                  <view class="biaoti_txt" > {{image.courage_name}}</view>
+                  <view class="shijain_txt">发布时间：{{image.uptime}}</view>
+                  <image src="{{image.type}}" style="position: relative; width: 90rpx; height: 90rpx; display: inline-block; box-sizing: border-box; left: 538rpx; top: -68rpx"></image>
+             </view>
+            </navigator>      
+          </view>
+          <view style='clear:both;'></view>
+  </view>
+
+</view>
+

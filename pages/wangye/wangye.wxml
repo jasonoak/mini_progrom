@@ -1,0 +1,2 @@
+<!--pages/wangye/wangye.wxml-->
+<web-view src="{{path}}"></web-view>
